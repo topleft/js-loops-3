@@ -36,13 +36,13 @@ describe('js-loops-3', function() {
     expect(getAges(students)).toEqual([25,28,31,23,19]);
   });
   it('return all [First Name, City] pairs from student object', function() {
-    expect(nameCity(students)).toEqual([["Derek", "Boulder"], ["Liz","Denver"],["Carl", "Denver"],["Peter", "Boulder"],["Megan", "Denver"]]);
+    expect(getNameAndCity(students)).toEqual([["Derek", "Boulder"], ["Liz","Denver"],["Carl", "Boulder"],["Peter", "Boulder"],["Megan", "Denver"]]);
   });
   it('returns all people from a given city from student object', function() {
-    expect(fromCity(students, city)).toEqual(["Derek is from Boulder", "Carl is from Boulder", "Peter is from Boulder"]);
+    expect(showFromCity(students, "Boulder")).toEqual(["Derek is from Boulder", "Carl is from Boulder", "Peter is from Boulder"]);
   });
   it('returns all student older than given age from student object', function() {
-    expect(olderThan(students, age)).toEqual(['Liz',"Carl"]);
+    expect(findOlderThan(students, 25)).toEqual(['Liz',"Carl"]);
   });
 
 
